@@ -1,0 +1,43 @@
+using System;
+
+namespace SimpleAI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Welcome message
+            Console.WriteLine("Hello! I am a simple AI. Ask me something!");
+
+            // Main loop to interact with the user
+            while (true)
+            {
+                Console.Write("\nYou: ");
+                string userInput = Console.ReadLine().ToLower();
+
+                // Basic AI decision logic
+                if (userInput.Contains("hello") || userInput.Contains("hi"))
+                {
+                    Console.WriteLine("AI: Hello! How can I help you today?");
+                }
+                else if (userInput.Contains("how are you"))
+                {
+                    Console.WriteLine("AI: I'm just a program, but I'm doing fine! How about you?");
+                }
+                else if (userInput.Contains("what is your name"))
+                {
+                    Console.WriteLine("AI: My name is SimpleAI.");
+                }
+                else if (userInput.Contains("bye"))
+                {
+                    Console.WriteLine("AI: Goodbye! Have a nice day!");
+                    break; // End the conversation
+                }
+                else
+                {
+                    Console.WriteLine("AI: I'm sorry, I don't understand that. Can you ask something else?");
+                }
+            }
+        }
+    }
+}
